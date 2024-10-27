@@ -5,3 +5,137 @@ body {
     background-color: #000; /* Black background */
     color: #fff;
 }
+/* Navigation Bar */
+nav {
+    background: linear-gradient(to right, rgba(148, 180, 148, 0.518), rgb(161, 186, 221)); /* Green and blue gradient */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 16px;
+    width: 100%; /* Full width navigation bar */
+    box-sizing: border-box;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.3); /* Box shadow */
+}
+nav a:hover{
+    color: aqua;
+}
+nav p {
+    font-size: 24px;
+    font-weight: bold;
+    color: white;
+    margin: 0;
+}
+
+nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Header Section */
+.header-text {
+    background-image: url('images/Home\ \(1\).png'); /* Set the background image */
+    background-size: cover; /* Cover the entire area */
+    background-position: center; /* Center the background image */
+    height: 500px; /* Increase height of header */
+    display: flex;
+    align-items: center; /* Align text vertically */
+    padding: 32px;
+    color: #fff;
+    box-sizing: border-box;
+    box-shadow: 0px 8px 12px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+}
+
+.header-text h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Text shadow for the title */
+}
+
+.header-text p {
+    font-size: 19px;
+    letter-spacing: 1px; /* Text effect - Spacing */
+}
+
+/* Main Content */
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px;
+}
+
+.intro {
+    max-width: 60%;
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent background */
+    padding: 20px;
+    margin-left: 50px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Box shadow */
+    transition: box-shadow 0.3s ease; /* Transition for hover effect */
+}
+.intro:hover {
+    box-shadow: 0px 8px 16px rgba(141, 127, 127, 0.5); /* Stronger shadow on hover */
+}
+
+
+.intro p {
+    font-size: 19px;
+    line-height: 1.6;
+}
+
+/* Social Media Section */
+.social-media {
+    background-color: rgba(255, 255, 255, 0.1); /* Semi-transparent box */
+    padding: 15px;
+    padding-right: 50px;
+    margin: 0;
+    margin-right: 100px;
+    border-radius: 10px;
+    max-width: 30%;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.3); /* Box shadow */
+    transition: box-shadow 0.3s ease; /* Transition for hover effect */
+}
+.social-media:hover {
+    box-shadow: 0px 8px 16px rgba(206, 149, 149, 0.5); /* Stronger shadow on hover */
+}
+.social-media a:hover{
+    color: #c44545;
+}
+
+.social-media h2 {
+    font-size: 24px;
+    margin-bottom: 16px;
+}
+
+.social-media ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-media li {
+    margin-bottom: 10px;
+}
+
+.social-media a {
+    text-decoration: none;
+    color: #00aced; /* Twitter Blue */
+    font-weight: bold;
+}
+.social-icon {
+    width: 40px; /* Set the width of icons */
+    height: auto; /* Maintain aspect ratio */
+    margin-left: 10px; /* Space between icons */
+    vertical-align: middle; /* Align icons with text */
+}
