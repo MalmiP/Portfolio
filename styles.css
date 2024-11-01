@@ -275,8 +275,12 @@ main {
     margin-bottom: 20px;
     box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
     position: relative;
+    animation: fadeIn 1.5s ease-in-out;
+    transition: transform 0.3s ease;
 }
-
+.blog-style-2:hover {
+    transform: translateY(-10px);
+}
 .blog-style-2 h3 {
     color: #2d3e50;
     margin-bottom: 10px;
@@ -387,6 +391,7 @@ main {
     position: relative;
     animation: fadeIn 1.5s ease-in-out;
     width: 500px;
+    transition: transform 0.3s ease;
 }
 
 .hobby-style-3 h3 {
@@ -397,6 +402,9 @@ main {
 
 .hobby-style-3 p {
     color: #555;
+}
+.hobby-style-3:hover {
+    transform: translateY(-10px);
 }
 
 /* Animation for hobby section */
