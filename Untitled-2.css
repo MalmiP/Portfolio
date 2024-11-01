@@ -1,0 +1,46 @@
+/* Main Content */
+main {
+    display: flex;
+    justify-content: space-between;
+    padding: 32px;
+}
+.hero {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    min-height: 100vh;
+    padding-top: 10px;
+}
+.intro1 {
+    max-width: 500px;
+}
+
+.role-badge {
+    display: inline-block;
+    background: linear-gradient(#ffc107, #f0c105);
+    color: #fff;
+    padding: 5px 10px;
+    border-radius: 20px;
+    font-size: 12px;
+    animation: fadeIn 1s ease;
+}
+
+.name {
+    font-size: 3em;
+    font-weight: bold;
+    color:  #ffffff;
+    margin-top: 10px;
+    animation: slideIn 1.2s ease;
+}
+
+.description {
+    font-size: 1em;
+    color: #b3b3b3;
+    margin-top: 10px;
+    line-height: 1.5;
+    animation: fadeIn 1.5s ease;
+}
+
+
+/!---none----!/
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
