@@ -1,58 +1,84 @@
 <!DOCTYPE html>
-<html>
-<style>
-body {font-family: Arial, Helvetica, sans-serif;}
-
-
-
-.news-container {
-  padding: 20px;
-  background-color: #5b8ab8;
-}
-
-input[type=text], input[type=submit] {
-  width: 100%;
-  padding: 12px;
-  margin: 8px 0;
-  display: inline-block;
-  border: 1px solid #cccccc;
-  box-sizing: border-box;
-}
-
-input[type=checkbox] {
-  margin-top: 16px;
-}
-
-input[type=submit] {
-  background-color: #70c3ec;
-  color: white;
-  border: none;
-}
-
-input[type=submit]:hover {
-  opacity: 0.8;
-}
-</style>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Us Page</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
 <body>
+    <header>
+        <nav>
+            <div class="profile">
+                <i class="material-symbols-outlined"></i>
+                <p>Malmi Perera</p>
+            </div>
 
-<form>
-  <div class="news-container">
-    <h2>Subscribe to our Newsletter</h2>
-    <p>Subscribe to my newsletter for exclusive content delivered straight to your inbox, including articles, project updates, and web development trends. Join our community and never miss a beat!</p>
-    </div>
-
-  <div class="news-container">
-    <input type="text" placeholder="Name" name="name" required>
-    <input type="text" placeholder="Email address" name="mail" required>
-    <label>
-      <input type="checkbox" checked="checked" name="subscribe"> Daily Newsletter
-    </label>
-  </div>
-
-  <div class="news-container">
-    <input type="submit" value="Subscribe">
-  </div>
-</form>
-
+            <ul>
+                <a href="home.html">Home</a>
+                <a href="about.html">About</a>
+                <a href="projects.html">Projects</a>
+                <a href="contact.html">Contact</a>
+            </ul>
+        </nav>
+    </header>
+    <section class="Contact">
+        <div class="contact-background">
+            <div class="contact-container">
+                <!-- Left Section with Find Me and Newsletter -->
+                <div class="contact-left">
+                    <!-- Find Me Section -->
+                    <div class="find-me">
+                        <h2>Find Me</h2>
+                        <p>📧 Email: john@doe.com</p>
+                        <p>📞 Tel: +250 708 770 000</p>
+                    </div>
+                    
+                    <!-- Newsletter Section -->
+                    <div class="newsletter">
+                        <h2>Subscribe to our Newsletter</h2>
+                        <p>Subscribe to my newsletter for exclusive content delivered straight to your inbox, including articles, project updates, and web development trends.</p>
+                        <form>
+                            <input type="text" placeholder="Name" style="width: 100%; padding: 10px; margin-top: 10px; border-radius: 5px; border: none;">
+                            <input type="email" placeholder="Email address" style="width: 100%; padding: 10px; margin-top: 10px; border-radius: 5px; border: none;">
+                            <label style="display: block; margin-top: 10px;">
+                                <input type="checkbox" checked> Daily Newsletter
+                            </label>
+                            <button type="submit" class="contact">Subscribe</button>
+                        </form>
+                    </div>
+                </div>
+    
+                <!-- Contact Form Section -->
+                <div class="contact-form">
+                    <h2>Contact Us Form</h2>
+                    <form>
+                        <div class="input-box">
+                            <input type="text" required>
+                            <label>First Name</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="text" required>
+                            <label>Last Name</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="email" required>
+                            <label>Email</label>
+                        </div>
+                        <div class="input-box">
+                            <input type="tel" required>
+                            <label>Mobile</label>
+                        </div>
+                        <div class="input-box message-box">
+                            <textarea required></textarea>
+                            <label>Type Your Message Here...</label>
+                        </div>
+                        <button type="submit" class="contact">Send</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 </body>
 </html>
+
