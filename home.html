@@ -5,14 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=account_circle" />
     <title>MALMI PERERA</title>
-
- <!-- Import Google Fonts -->
- <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
- <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" rel="stylesheet">
-
-
-<!-- Link to external CSS -->
-<link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="styles.css">
 
 </head>
 <body>
@@ -22,7 +15,11 @@
                 <i class="material-symbols-outlined">account_circle</i>
                 <p>Malmi Perera</p>
             </div>
-
+            
+            <!-- Hamburger Menu Toggle -->
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">&#9776;</label>
+    
             <ul>
                 <a href="home.html">Home</a>
                 <a href="about.html">About</a>
@@ -31,22 +28,40 @@
             </ul>
         </nav>
     </header>
+    <!--main content-->
+    <main class="hero">
+        <div class="intro1">
+            <span class="role-badge">Software Developer</span>
+            <h1 class="name">Malmi Perera</h1>
+            <p class="description">
+                I'm a developer, innovator, and creator of engaging web experiences, functional tools, and side projects that spark curiosity
+            </p>
+            <div class="buttons">
+                <a href="#" class="btn-download">Explore More</a>
+            </div>
+            <div class="checkout-icon">
+                <p>Connect with me: </p>
+                <br>
+                <a href="https://www.instagram.com/yourhandle" target="_blank">
+                    <img src="images/instagram.png" alt="Instagram" class="social">
+                </a>
+                <a href="https://www.facebook.com/yourhandle" target="_blank">
+                    <img src="images/facebook.png" alt="Facebook" class="social">
+                </a>
+                <a href="https://www.linkedin.com/in/yourprofile" target="_blank">
+                    <img src="images/linkedin.png" alt="LinkedIn" class="social">
+                </a>
+                <a href="https://twitter.com/yourhandle" target="_blank">
+                    <img src="images/twitter.png" alt="Twitter" class="social">
+                </a>
+            </div>
+            
+        </div>
+        <div class="image">
+            <div class="image-circle">
+                <img src="images/mmi (1).jpg" alt="profile-image" class="profile-image-home">
+            </div>
+        </div>
+    </main>
 
-<!--main content-->
-<main class="hero">
-    <div class="intro1">
-        <span class="role-badge">Software Developer</span>
-        <h1 class="name">Malmi Perera</h1>
-        <p class="description">
-            I'm a developer, innovator, and creator of engaging web experiences, functional tools, and side projects that spark curiosity
-        </p>
-        <div class="buttons">
-            <a href="#" class="btn download">Download CV</a>
-        </div>
-    </div>
-    <div class="image">
-        <div class="image-circle">
-            <img src="images/mmi (1).jpg" alt="profile-image">
-        </div>
-    </div>
-</main>
+</body>
