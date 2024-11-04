@@ -136,6 +136,9 @@ main {
 
 .intro1 {
     max-width: 500px;
+    max-width: 500px;
+    text-overflow: ellipsis; /* Show ellipsis for overflowed text */
+    overflow: hidden; /* Prevent overflowed content from being displayed */
 }
 /*style target elements of direct children of hero*/
 .hero > h1{
@@ -184,6 +187,7 @@ main {
     margin-top: 10px;
     line-height: 1.5;
     animation: fadeIn 1.5s ease;
+    overflow-wrap: break-word; /* Allows breaking long words */
 }
 
 .buttons {
@@ -385,6 +389,7 @@ a[href^="https"] {
 }
 
 .about-section {
+    writing-mode: horizontal-tb; /* Changes text direction */
     background-image: url('images/Dark\ Blue\ Modern\ Design\ Twitter\ Header.png'); /* Replace 'background.jpg' with your image file */
     background-size: cover; /* Ensures the image covers the entire container */
     background-position: center; /* Centers the background image */
@@ -629,8 +634,9 @@ font-size: 0.9em;
     background-position: center; /* Center the background image */
     text-align: center;
     width: 100%;
-    height: 600px;  
+    height: 650px;  
     text-shadow: 0 2px 2px #1abc9c;
+    overflow: hidden;
 }
 /*style elements in a attribute selector "button"*/
 [class*="button"] {
@@ -706,6 +712,8 @@ font-size: 0.9em;
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease;
+    overflow: hidden; /* Important for text-overflow to work */
+    text-overflow: ellipsis;
 }
 /*style based on their position/structure*/
 .project-item:nth-child(3n) {
@@ -1071,24 +1079,22 @@ input[type="checkbox"]:checked + label {
 
 /*Style input (email) based on validity*/
 input[type="email"]:valid {
-    border-color: #1abc9c; /* Green border for valid email */
-    background-color: #f0fdfd; /* Light background for valid input */
+    border-color: #13416f; /* Green border for valid email */
 }
 
 input[type="email"]:invalid {
-    border-color: #ff4d4d; /* Red border for invalid email */
-    background-color: #ffe6e6; /* Light red background for invalid input */
+    border-color: #1abc9c; /* Red border for invalid email */
 }
 
 /*Style input (telno) based on validity*/
 input[type="tel"]:valid {
-    border-color: #1abc9c;
-    box-shadow: 0 0 5px rgba(26, 188, 156, 0.5); /* Green glow for valid input */
+    border-color: #13416f;
+    box-shadow: 0 0 5px rgba(95, 244, 255, 0.5); /* Green glow for valid input */
 }
 
 input[type="tel"]:invalid {
-    border-color: #ff4d4d;
-    box-shadow: 0 0 5px rgba(255, 77, 77, 0.5); /* Red glow for invalid input */
+    border-color: #1abc9c;
+    box-shadow: 0 0 5px rgba(77, 216, 255, 0.5); /* Red glow for invalid input */
 }
 
 
@@ -1096,7 +1102,7 @@ input[type="tel"]:invalid {
     width: 100%;
     padding: 10px;
     background: transparent;
-    color: #c2e0eb;
+    color: #2e6f87;
     outline: none;
     resize: none;
 }
@@ -1115,19 +1121,19 @@ input[type="tel"]:invalid {
 }
 /*Style input (text) based on validity*/
 input[type="text"]:valid {
-    border-color: #1abc9c;
+    border-color: #13416f;
 }
 
 input[type="text"]:invalid {
-    border-color: #ff4d4d;
+    border-color: #1abc9c;
 }
 /*Style input (required fields) based on validity*/
 input:required:invalid {
-    border-color: #ff4d4d; /* Red border for required fields when invalid */
+    border-color: #1abc9c; /* Red border for required fields when invalid */
 }
 
 input:required:valid {
-    border-color: #1abc9c; /* Green border for required fields when valid */
+    border-color: #13416f; /* Green border for required fields when valid */
 }
 .input-box input:focus + label,
 .input-box input:valid + label,
@@ -1144,11 +1150,11 @@ input:required:valid {
 }
 /*Style input (required fields) based on validity*/
 textarea:valid {
-    border-color: #1abc9c;
+    border-color: #13416f;
 }
 
 textarea:invalid {
-    border-color: #ff4d4d;
+    border-color: #1abc9c;
 }
 .Contact button {
     width: 100%;
