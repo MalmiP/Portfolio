@@ -30,6 +30,7 @@ nav{
     box-sizing: border-box;
     box-shadow: 0px 4px 6px rgba(219, 228, 226, 0.6); /* Semi-transparent black */
     position: relative;
+    margin-top: 0;
 }
 
 /*Style Relational (Descendant) Selector*/
@@ -53,10 +54,14 @@ nav p{
 /*Style Relational (child) Selector*/
 /*style target elements of direct children of nav*/
 nav > ul {
-    display: flex;
+    display: none;
+    position: absolute; /* Allow the menu to overlay */
     list-style: none;
     gap: 15px;
     margin: 0;
+    top: 50px; /* Position below the navbar */
+    left: 0;
+    
 }
 
 /*Style Relational (Descendant) Selector*/
@@ -65,13 +70,18 @@ nav ul a{
     display: inline-block;
     font-size: 17px;
     color: #1abc9c;
-    padding: 10px 15px;
+    padding: 10px;
     text-decoration: none;
     transition: color 0.3s;
     z-index: 1;
     display: inline-block;
-    text-align: center;
+    text-align: left;
     transition: color 0.3s;
+    width: 100%;
+}
+/* Show the menu when the checkbox is checked */
+#menu-toggle:checked + .menu-icon + ul {
+    display: flex; /* Show the menu */
 }
 /*Style negation classes*/
 nav ul a:not(.active) {
@@ -107,7 +117,7 @@ nav i {
 }
 /* Hamburger Menu Styles */
 .menu-icon {
-    display: none;
+    display: block;
     font-size: 24px;
     color: #1abc9c;
     cursor: pointer;
@@ -124,7 +134,35 @@ main {
     display: flex;
     justify-content: space-between;
     padding: 32px;
-    background-image: url(images/homeee.png);
+}
+.MainVideo {
+    position: relative;
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+
+.MainVideo video {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    position: absolute; /* Position video absolutely */
+    top: 0;
+    left: 0;
+    z-index: 1; /* Behind the overlay */
+}
+.overlay {
+    display: flex;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex; /* Use flexbox to center content */
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+    z-index: 2; /* In front of the video */
 }
 .hero {
     display: flex;
@@ -225,6 +263,7 @@ main {
     width: 350px;
     height: 350px;
     animation: imagePop 1.2s ease;
+    padding-left: 300px;
 }
 .profile-image-home{
     height: 450px;
@@ -311,9 +350,28 @@ a[href^="https"] {
 
 /* Responsive Design for smaller screens */
 /* Responsive Styles */
+/* Styles for larger screens */
+@media (min-width: 768px) {
+    nav ul {
+        margin-top: 0;
+        display: flex; /* Show menu items in row on larger screens */
+        position: static; /* Reset position */
+        background-color: transparent; /* Remove background */
+        box-shadow: none; /* Remove shadow */
+    }
+
+    .menu-icon {
+        display: none; /* Hide hamburger on larger screens */
+    }
+
+    nav ul {
+        gap: 15px; /* Space between links */
+    }
+}
 @media (max-width: 768px) {
     /* Hide the normal profile and make the menu icon visible */
     nav ul {
+        margin-top: 0;
         display: none;
         flex-direction: column;
         width: 100%;
