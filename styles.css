@@ -96,6 +96,7 @@ nav ul a:hover,
 nav ul a.active {
     color: #ffffff;
     border-bottom: 2px solid #1abc9c; /* Adds underline effect on active and hover */
+    transform: scale(1.05);
 }
 
 nav i {
@@ -229,6 +230,9 @@ main {
     margin-top: 0px;
     margin-bottom: 200px;
 }
+.profile-image-home:hover {
+    transform: scale(1.1);
+}
 .image-circle {
     width: 100%;
     height: 100%;
@@ -282,6 +286,23 @@ a[href^="https"] {
     height: auto; /* Maintain aspect ratio */
     margin-left: 10px; /* Space between icons */
     vertical-align: middle; /* Align icons with text */
+}
+/* Keyframes for fadeIn animation */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+/* Keyframes for slideIn animation */
+@keyframes slideIn {
+    0% { transform: translateX(-50px); opacity: 0; }
+    100% { transform: translateX(0); opacity: 1; }
+}
+
+/* Keyframes for imagePop animation */
+@keyframes imagePop {
+    0% { transform: scale(0.8); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
 }
 
 /* Responsive Design for smaller screens */
