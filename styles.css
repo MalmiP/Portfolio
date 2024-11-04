@@ -4,12 +4,12 @@ body {
     margin: 0;
     padding: 0;
     font-family: "Poppins", sans-serif;
-    background-color: #000000; /* Black background */
+    background-color: #000000; 
     color: #fff;
 }
 
 html {
-    scroll-behavior: smooth; /* Enables smooth scrolling */
+    scroll-behavior: smooth; 
 }
 
 /*Style negation classes*/
@@ -18,19 +18,21 @@ h1:not(.hero h1) {
 
 }
 
-/* Navigation Bar */
 
+/* NAVIGATION BAR */
 header nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 16px;
-    width: 100%; /* Full width navigation bar */
+    width: 100%; 
     height: 50px;
     box-sizing: border-box;
-    box-shadow: 0px 4px 6px rgba(219, 228, 226, 0.6); /* Semi-transparent black */
+    box-shadow: 0px 4px 6px rgba(219, 228, 226, 0.6); 
     position: relative;
     margin-top: 0;
+    z-index: 10;
+    background-color: #000;
 }
 
 /*Style Relational (Descendant) Selector*/
@@ -54,12 +56,12 @@ nav p{
 /*Style Relational (child) Selector*/
 /*style target elements of direct children of nav*/
 nav > ul {
-    display: none;
-    position: absolute; /* Allow the menu to overlay */
+    display: flex;
+    position: absolute; 
     list-style: none;
     gap: 15px;
     margin: 0;
-    top: 50px; /* Position below the navbar */
+    top: 50px; 
     left: 0;
     
 }
@@ -81,16 +83,16 @@ nav ul a{
 }
 /* Show the menu when the checkbox is checked */
 #menu-toggle:checked + .menu-icon + ul {
-    display: flex; /* Show the menu */
+    display: flex; 
 }
 /*Style negation classes*/
 nav ul a:not(.active) {
-    color: #1abc9c; /* Different color for inactive links */
-    opacity: 0.8; /* Lower opacity for non-active links */
+    color: #1abc9c; 
+    opacity: 0.8;
 }
 /*style based on their position/structure*/
 nav ul li:first-child a {
-    color: #50ddc1; /* Different color for the first link */
+    color: #50ddc1; 
 }
 /*style based on their position/structure*/
 nav ul li:last-child a {
@@ -98,14 +100,14 @@ nav ul li:last-child a {
 }
 /*Style nth child classes*/
 nav ul li:nth-child(odd) a {
-    color: #6fe4cd; /* Color for odd items */
+    color: #6fe4cd;
 }
 
 /*Styling based on user action*/
 nav ul a:hover,
 nav ul a.active {
     color: #ffffff;
-    border-bottom: 2px solid #1abc9c; /* Adds underline effect on active and hover */
+    border-bottom: 2px solid #1abc9c; 
     transform: scale(1.05);
 }
 
@@ -128,8 +130,10 @@ nav i {
     display: none;
 }
 
-/* Main Content */
 
+
+
+/* HOME PAGE */
 main {
     display: flex;
     justify-content: space-between;
@@ -149,11 +153,10 @@ main {
     height: 100%;
     width: 100%;
     object-fit: cover;
-    position: absolute; /* Position video absolutely */
+    position: absolute; 
     top: 0;
     left: 0;
-    z-index: 1; /* Behind the overlay */
-
+    z-index: 1; 
 }
 .overlay {
     display: flex;
@@ -163,15 +166,15 @@ main {
     left: 0;
     width: 100%;
     height: 100%;
-    display: flex; /* Use flexbox to center content */
-    align-items: center; /* Center vertically */
-    justify-content: center; /* Center horizontally */
-    z-index: 2; /* In front of the video */
-    pointer-events: none; /* Disable pointer events for overlay */
+    display: flex;
+    align-items: center; 
+    justify-content: center; 
+    z-index: 2; 
+    pointer-events: none; 
 
 }
 .overlay * {
-    pointer-events: auto; /* Enable pointer events for child elements */
+    pointer-events: auto; 
 }
 .hero {
     display: flex;
@@ -184,8 +187,8 @@ main {
 .intro1 {
     max-width: 500px;
     max-width: 500px;
-    text-overflow: ellipsis; /* Show ellipsis for overflowed text */
-    overflow: hidden; /* Prevent overflowed content from being displayed */
+    text-overflow: ellipsis; 
+    overflow: hidden; 
 }
 /*style target elements of direct children of hero*/
 .hero > h1{
@@ -234,23 +237,25 @@ main {
     margin-top: 10px;
     line-height: 1.5;
     animation: fadeIn 1.5s ease;
-    overflow-wrap: break-word; /* Allows breaking long words */
+    overflow-wrap: break-word; 
 }
 
 .buttons {
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
-    color: #1abc9c; /* Button text color */
-    background-color: linear-gradient(135deg, #1abc9c, #16a085);    border-radius: 5px; /* Rounded corners */
-    text-decoration: none; /* Remove underline */
-    transition: background-color 0.3s, color 0.3s; /* Transition effects */
+    color: #1abc9c; 
+    background-color: linear-gradient(135deg, #1abc9c, #16a085);    border-radius: 5px; 
+    /* Remove underline */
+    text-decoration: none; 
+    transition: background-color 0.3s, color 0.3s; 
     margin-top: 50px;
 }
 /*Styling based on user action*/
 .buttons:hover {
-    background-color: transparent; /* Transparent background */
-    border: 2px solid #1abc9c; /* Border color */
+    /* Transparent background */
+    background-color: transparent; 
+    border: 2px solid #1abc9c; 
 }
 
 /*Style negation classes*/
@@ -333,10 +338,10 @@ a[href^="https"] {
 
 /* Social Icons */
 .social {
-    width: 34px; /* Set the width of icons */
-    height: auto; /* Maintain aspect ratio */
-    margin-left: 10px; /* Space between icons */
-    vertical-align: middle; /* Align icons with text */
+    width: 34px; 
+    height: auto; 
+    margin-left: 10px; 
+    vertical-align: middle; 
 }
 /* Keyframes for fadeIn animation */
 @keyframes fadeIn {
@@ -358,10 +363,9 @@ a[href^="https"] {
 
 
 
-/*About PAge*/
 
-/* About page specific styling */
 
+/*ABOUT PAGE*/
 .about-page {
     display: flex;
     justify-content: center;
@@ -372,16 +376,17 @@ a[href^="https"] {
 }
 
 .about-section {
-    writing-mode: horizontal-tb; /* Changes text direction */
-    background-image: url('images/Dark\ Blue\ Modern\ Design\ Twitter\ Header.png'); /* Replace 'background.jpg' with your image file */
-    background-size: cover; /* Ensures the image covers the entire container */
-    background-position: center; /* Centers the background image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-attachment: fixed; /* Enables parallax effect */
+    writing-mode: horizontal-tb; 
+    background-image: url('images/Dark\ Blue\ Modern\ Design\ Twitter\ Header.png'); 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
     text-align: center;
     width: 100%;
     height: 100%;
-    background-color: rgba(0, 0, 0, 0.7); /* Adds a semi-transparent background to improve text readability */
+    /* Adds a semi-transparent background*/
+    background-color: rgba(0, 0, 0, 0.7); 
     padding: 20px;
     border-radius: 8px;
 }
@@ -403,7 +408,7 @@ a[href^="https"] {
     transition: width 0.3s;
 }
 .about-section:hover .underline {
-    width: 80px; /* Expands underline on hover */
+    width: 80px; 
 }
 .about-content{
     background-color: rgba(0, 0, 0, 0.7);
@@ -447,10 +452,10 @@ a[href^="https"] {
 }
 .about-full-content{
     background-image: url('images/space.jpg'); 
-    background-size: cover; /* Ensures the image covers the entire container */
-    background-position: center; /* Centers the background image */
-    background-repeat: no-repeat; /* Prevents the image from repeating */
-    background-attachment: fixed; /* Enables parallax effect */
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat; 
+    background-attachment: fixed; 
 }
 .about-me {
     padding: 100px;
@@ -591,8 +596,9 @@ a[href^="https"] {
   }
 
 /*Style negation classes*/
+/* Shadow for all except first card */
 .skills-card:not(:first-child) {
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for all except first card */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); 
 }
 
 .skills-card h3 {
@@ -614,8 +620,9 @@ font-size: 0.9em;
 /*Projects*/
 .project-bg{
     background-image: url('images/Blue\ and\ Black\ Modern\ Coding\ School\ Presentation.png');
-    background-size: cover; /* Cover the entire area */
-    background-position: center; /* Center the background image */
+    /* Cover the entire area */
+    background-size: cover; 
+    background-position: center; 
     text-align: center;
     width: 100%;
     height: 650px;  
@@ -630,23 +637,24 @@ font-size: 0.9em;
     display: inline-block;
     padding: 10px 20px;
     font-size: 16px;
-    color: #ebf8f5; /* Button text color */
-    background-color: transparent; /* Transparent background */
-    border: 2px solid #1abc9c; /* Border color */
-    border-radius: 5px; /* Rounded corners */
-    text-decoration: none; /* Remove underline */
-    transition: background-color 0.3s, color 0.3s; /* Transition effects */
+    color: #ebf8f5; 
+    background-color: transparent; 
+    border: 2px solid #1abc9c; 
+    border-radius: 5px; 
+    text-decoration: none; 
+    transition: background-color 0.3s, color 0.3s; 
     margin-top: 50px;
 }
 /*Styling based on user action*/
 .buttons:active, .transparent-button:active {
-    background-color: #148f77; /* Darker shade when button is actively being clicked */
-    transform: scale(0.98); /* Slightly scale down for a pressed effect */
+    background-color: #148f77; 
+    /* Slightly scale down for a pressed effect */
+    transform: scale(0.98); 
 }
 /*Styling based on user action*/
 .transparent-button:hover {
-    background-color: #b7f3e7; /* Change background color on hover */
-    color: rgb(53, 89, 88); /* Change text color on hover */
+    background-color: #b7f3e7; 
+    color: rgb(53, 89, 88); 
 }
 .project-bg h1 {
     text-align: center;
@@ -696,19 +704,19 @@ font-size: 0.9em;
     padding: 20px;
     text-align: center;
     transition: transform 0.3s ease;
-    overflow: hidden; /* Important for text-overflow to work */
+    overflow: hidden; 
     text-overflow: ellipsis;
 }
 /*style based on their position/structure*/
 .project-item:nth-child(3n) {
-    transform: scale(1.05); /* Slightly larger scale for every third item */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Emphasized shadow */
+    transform: scale(1.05); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
 }
 
 /*Style different nth child classes*/
 .project-item:nth-child(2n) {
-    transform: scale(1.05); /* Slightly larger scale for every third item */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Emphasized shadow */
+    transform: scale(1.05); 
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); 
 }
 
 /*Styling based on user action*/
@@ -779,12 +787,13 @@ font-size: 0.9em;
 
 /*style based on their position/structure*/
 .blog-style-2:first-of-type {
-    border-left: 5px solid #31bbd4; /* Different color for the first blog post */
-    background-color: #d3f6f6; /* Slightly different background */
+    border-left: 5px solid #31bbd4; 
+    background-color: #d3f6f6; 
 }
 /*Style different nth child classes*/
 .blog-style-2:nth-of-type(2) {
-    border-left: 5px solid #31a6d4; /* Different border color for the first blog post */
+    border-left: 5px solid #31a6d4;
+
 }
 
 .blog-style-2 h3 {
@@ -912,7 +921,7 @@ font-size: 0.9em;
 }
 /*Style different nth child classes*/
 .hobby-card:nth-child(3n+1) {
-    border: 2px solid #4a90e2; /* Adds a distinct border to specific cards */
+    border: 2px solid #4a90e2; 
 }
 .hobby-style-3 {
     background: linear-gradient(135deg, #92daee 0%,  #d8dee3 100%);
@@ -952,7 +961,11 @@ font-size: 0.9em;
     }
 }
 
-/*Contact Page*/
+
+
+
+
+/*CONTACT PAGE*/
 #Contact {
     margin: 0;
     padding: 0;
@@ -967,7 +980,7 @@ font-size: 0.9em;
     background-image: url(images/Photocentric\ Time\ to\ Relax.png);
     background-size: cover;
     background-position: center;
-    background-attachment: fixed; /* Enables parallax effect */
+    background-attachment: fixed; 
     width: 100vw;
     height: 100vh;
     display: flex;
@@ -1055,13 +1068,14 @@ input[type="tel"] {
     padding: 10px;
     margin: 10px 0;
 }
+/* Display navigation when menu toggle is checked */
 #menu-toggle:checked ~ nav {
-    display: block; /* Display navigation when menu toggle is checked */
+    display: block; 
 }
 
 /*Styling based on user action*/
 input[type="checkbox"]:checked + label {
-    color: #1abc9c; /* Change label color when checkbox is checked */
+    color: #1abc9c; 
     font-weight: bold; 
 }
 .input-box {
@@ -1071,22 +1085,22 @@ input[type="checkbox"]:checked + label {
 
 /*Style input (email) based on validity*/
 input[type="email"]:valid {
-    border-color: #13416f; /* Green border for valid email */
+    border-color: #13416f; 
 }
 
 input[type="email"]:invalid {
-    border-color: #1abc9c; /* Red border for invalid email */
+    border-color: #1abc9c; 
 }
 
 /*Style input (telno) based on validity*/
 input[type="tel"]:valid {
     border-color: #13416f;
-    box-shadow: 0 0 5px rgba(95, 244, 255, 0.5); /* Green glow for valid input */
+    box-shadow: 0 0 5px rgba(95, 244, 255, 0.5); 
 }
 
 input[type="tel"]:invalid {
     border-color: #1abc9c;
-    box-shadow: 0 0 5px rgba(77, 216, 255, 0.5); /* Red glow for invalid input */
+    box-shadow: 0 0 5px rgba(77, 216, 255, 0.5); 
 }
 
 
@@ -1100,8 +1114,8 @@ input[type="tel"]:invalid {
 }
 /*styling based on user action*/
 .input-box input:focus, .input-box textarea:focus {
-    border-color: #0b5143; /* Change border color when focused */
-    box-shadow: 0 0 5px rgba(49, 212, 179, 0.5); /* Add subtle glow effect */
+    border-color: #0b5143; 
+    box-shadow: 0 0 5px rgba(49, 212, 179, 0.5); 
 }
 .input-box label {
     position: absolute;
@@ -1121,11 +1135,11 @@ input[type="text"]:invalid {
 }
 /*Style input (required fields) based on validity*/
 input:required:invalid {
-    border-color: #1abc9c; /* Red border for required fields when invalid */
+    border-color: #1abc9c;
 }
 
 input:required:valid {
-    border-color: #13416f; /* Green border for required fields when valid */
+    border-color: #13416f; 
 }
 .input-box input:focus + label,
 .input-box input:valid + label,
@@ -1163,7 +1177,10 @@ textarea:invalid {
 button:hover {
     background-color: #85a6cd;
 }
-/*Footer*/
+
+
+
+/*FOOTER*/
 .main-footer{
     position: relative;
     bottom: 0;
@@ -1279,24 +1296,24 @@ display: block;
 
 /* Responsive Styles for Nav bar */
 @media (min-width: 768px) {
+    
     nav ul {
         margin-top: 0;
-        display: flex; /* Show menu items in row on larger screens */
-        position: static; /* Reset position */
-        background-color: transparent; /* Remove background */
-        box-shadow: none; /* Remove shadow */
+        display: flex; 
+        position: static; 
+        background-color: transparent; 
+        box-shadow: none; 
     }
 
     .menu-icon {
-        display: none; /* Hide hamburger on larger screens */
-    }
+        display: none; 
+        }
 
     nav ul {
-        gap: 15px; /* Space between links */
+        gap: 15px; 
     }
 }
 @media (max-width: 768px) {
-    /* Hide the normal profile and make the menu icon visible */
     nav ul {
         margin-top: 0;
         display: none;
@@ -1344,6 +1361,7 @@ display: block;
     .intro {
         max-width: 100%;
         text-align: center;
+        
     }
 
     .social-media {
@@ -1361,6 +1379,65 @@ display: block;
 
 }
 
+/* Tablet styles */
+@media (min-width: 768px) {
+    
+
+    header nav {
+        padding: 16px 32px;
+    }
+
+    nav > ul {
+        display: flex;
+        flex-direction: row;
+        position: static;
+    }
+
+    .overlay {
+        flex-direction: row;
+        text-align: left;
+        padding: 20px;
+    }
+
+    main.hero {
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-around;
+    }
+
+    .intro1 {
+        max-width: 500px;
+        padding: 0;
+    }
+
+    .image {
+        max-width: 250px;
+    }
+}
+
+/* Desktop and larger screens */
+@media (min-width: 992px) {
+ 
+    
+    header nav {
+        padding: 16px 50px;
+    }
+
+    .overlay {
+        padding: 0 50px;
+    }
+
+    main.hero {
+        flex-direction: row;
+        align-items: center;
+        padding: 32px;
+    }
+
+    .intro1 {
+        max-width: 600px;
+    }
+}
+
 /* Responsive Styles for About Page */
 
 .about-page, .about-full-content, .skills-section, .education {
@@ -1368,7 +1445,6 @@ display: block;
 }
 
 @media (max-width: 1024px) {
-    /* Adjust the layout and font sizes for medium screens */
     .about-content-wrapper {
         flex-direction: column;
     }
@@ -1394,18 +1470,15 @@ display: block;
 }
 
 @media (max-width: 768px) {
-    /* Further adjust layout for tablets and smaller screens */
     nav ul {
         flex-direction: column;
         gap: 10px;
     }
 
-    /* Adjust header menu icon positioning */
     .menu-icon {
         font-size: 24px;
     }
 
-    /* Make about section content responsive */
     .about-section {
         padding: 10px;
         text-align: center;
@@ -1420,7 +1493,6 @@ display: block;
         padding: 20px;
     }
 
-    /* Skills section adjustments */
     .skills-container {
         flex-direction: column;
     }
@@ -1468,7 +1540,6 @@ display: block;
         padding: 0;
     }
 
-    /* Adjust for header and profile section */
     .profile-img {
         width: 120px;
         height: 120px;
@@ -1586,10 +1657,9 @@ display: block;
     }
 
     .contact-left, .contact-form {
-        width: 100%; /* Full width for both sections on smaller screens */
+        width: 100%; 
     }
 
-    /* Adjust button and input sizes */
     input[type="text"], input[type="email"], input[type="tel"], .message-box textarea {
         font-size: 16px;
     }
@@ -1601,7 +1671,7 @@ display: block;
         display: flex;
         flex-direction: column;
         position: absolute;
-        top: 60px; /* Adjust based on navbar height */
+        top: 60px;
         left: 0;
         width: 100%;
         background-color: rgba(0, 0, 0, 0.8);
@@ -1610,7 +1680,7 @@ display: block;
 }
 
 @media (max-width: 480px) {
-    /* Smaller screens styling */
+
     .contact-background {
         padding: 20px;
     }
@@ -1620,7 +1690,6 @@ display: block;
         padding: 15px;
     }
 
-    /* Font size adjustments */
     .contact-left h2, .contact-form h2 {
         font-size: 20px;
     }
@@ -1635,7 +1704,7 @@ display: block;
     }
 }
 
-/* Other input styles and focus effects */
+
 .input-box input, .input-box textarea {
     width: 100%;
     padding: 10px;
@@ -1645,7 +1714,7 @@ display: block;
     resize: none;
 }
 
-/* Footer styling for responsiveness */
+/* Responsive Styles for Footer*/
 .main-footer {
     padding: 20px;
     text-align: center;
