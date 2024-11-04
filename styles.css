@@ -12,11 +12,15 @@ html {
     scroll-behavior: smooth; /* Enables smooth scrolling */
 }
 
+/*Style negation classes*/
+h1:not(.hero h1) {
+    border: #000;
+
+}
 
 /* Navigation Bar */
 
 nav{
-    background-color: rgba(52, 73, 94, 0.6); /* Slight transparency for navbar */
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -28,10 +32,12 @@ nav{
     position: relative;
 }
 
+/*Style Relational (Descendant) Selector*/
 nav .profile {
     display: flex;
     align-items: center;
 }
+/*Style Relational (child) Selector*/
 /*style target elements of direct children of nav*/
 nav .profile > i {
     margin-right: 10px;
@@ -44,6 +50,7 @@ nav p{
     text-shadow: 2px 2px 8px #f5fdfb;
 
 }
+/*Style Relational (child) Selector*/
 /*style target elements of direct children of nav*/
 nav > ul {
     display: flex;
@@ -51,6 +58,8 @@ nav > ul {
     gap: 15px;
     margin: 0;
 }
+
+/*Style Relational (Descendant) Selector*/
 nav ul a{
     position: relative;
     display: inline-block;
@@ -64,6 +73,24 @@ nav ul a{
     text-align: center;
     transition: color 0.3s;
 }
+/*Style negation classes*/
+nav ul a:not(.active) {
+    color: #1abc9c; /* Different color for inactive links */
+    opacity: 0.8; /* Lower opacity for non-active links */
+}
+/*style based on their position/structure*/
+nav ul li:first-child a {
+    color: #50ddc1; /* Different color for the first link */
+}
+/*style based on their position/structure*/
+nav ul li:last-child a {
+    padding-right: 0;
+}
+/*Style nth child classes*/
+nav ul li:nth-child(odd) a {
+    color: #6fe4cd; /* Color for odd items */
+}
+
 /*Styling based on user action*/
 nav ul a:hover,
 nav ul a.active {
@@ -113,6 +140,11 @@ main {
 .hero > h1{
     text-shadow: 2px 2px 4px #f5fdfb;
 }
+/*Style different nth child classes*/
+.hero p:nth-child(2) {
+    font-size: 1em;
+    color: #b3b3b3; /* Different color for second paragraph */
+}
 .role-badge {
     display: inline-block;
     background-color: #444;
@@ -158,9 +190,7 @@ main {
     padding: 10px 20px;
     font-size: 16px;
     color: #1abc9c; /* Button text color */
-    background-color: #1abc9c; /* Change background color on hover */
-    color: white; /* Change text color on hover */
-    border-radius: 5px; /* Rounded corners */
+    background-color: linear-gradient(135deg, #1abc9c, #16a085);    border-radius: 5px; /* Rounded corners */
     text-decoration: none; /* Remove underline */
     transition: background-color 0.3s, color 0.3s; /* Transition effects */
     margin-top: 50px;
@@ -170,6 +200,12 @@ main {
     background-color: transparent; /* Transparent background */
     border: 2px solid #1abc9c; /* Border color */
 }
+
+/*Style negation classes*/
+.buttons:not(.no-hover):hover {
+    color: white;
+}
+
 .btn-download{
     color: #fff;
 }
@@ -347,6 +383,7 @@ a[href^="https"] {
     margin-bottom: 10px;
     text-shadow: 2px 2px #88c8aa;
 }
+/*Style Relational (child) Selector*/
 /*style target elements of direct children of about*/
 .about-section > .underline {
     display: block;
@@ -422,10 +459,6 @@ a[href^="https"] {
     margin-right: 5px;
 }
 
-.skills-section, .education {
-    background: linear-gradient(135deg, #13416f 0%,  #b6c3cf 100%);
-    opacity: 0.8;
-}
 
 
 /* Left and Right Side Content */
@@ -451,12 +484,21 @@ a[href^="https"] {
     margin: 10px auto 0;
 }
 .education{
+    background: linear-gradient(135deg, #13416f 0%,  #b6c3cf 100%);
+    opacity: 0.8;
     background-color: #9bbee4;
     border-radius: 10px;
     padding: 50px;
     text-shadow: 0 2px 2px #6dc7b1;
 }
+
+/*Style different nth child classes*/
+.education h2:nth-child(2) {
+    text-shadow: 0 2px 2px #1abc9c;
+}
 .skills-section {
+    background: linear-gradient(135deg, #13416f 0%,  #b6c3cf 100%);
+    opacity: 0.8;
     color: #dce5e8;
     text-align: center;
     padding: 50px 0;
@@ -464,7 +506,7 @@ a[href^="https"] {
     border-radius: 8px;
     box-shadow: 0 4px 10px rgba(232, 225, 225, 0.1);
 }
-
+/*Style Relational (child) Selector*/
 /*style target elements of direct children of skill section*/
 .skills-section > h1 {
     color: #31d4b3;
@@ -476,6 +518,7 @@ a[href^="https"] {
     padding-bottom: 10px;
     text-shadow: 0 2px 2px #f5fdfb;
 }
+/*Style Relational (child) Selector*/
 /*style target elements of direct children of skill section*/
 .skills-section > h2 {
     color: #404141;
@@ -491,7 +534,9 @@ a[href^="https"] {
     justify-content: center;
     gap: 20px;
 }
-
+.skills-container h2{
+    color: #000;
+}
 .skills-card {
     width: 400px;
     background-color: #f4f4f4b2;
@@ -505,6 +550,14 @@ a[href^="https"] {
 /*Styling based on user action*/
 .skills-card:hover {
     transform: translateY(-10px);
+}
+/*style based on their position/structure*/
+.skills-card:nth-child(even) {
+    background-color: #f4f4f4b2; 
+}
+/*style based on their position/structure*/
+.skills-card:nth-child(odd) {
+    background-color: #c5f0fab2; 
 }
 .details-container {
     text-align: left;
@@ -530,7 +583,12 @@ a[href^="https"] {
     height: 20px;
     margin-right: 10px;
   }
-  
+
+/*Style negation classes*/
+.skills-card:not(:first-child) {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Shadow for all except first card */
+}
+
 .skills-card h3 {
     font-size: 1.3rem;
     font-weight: bold;
@@ -628,6 +686,18 @@ font-size: 0.9em;
     text-align: center;
     transition: transform 0.3s ease;
 }
+/*style based on their position/structure*/
+.project-item:nth-child(3n) {
+    transform: scale(1.05); /* Slightly larger scale for every third item */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Emphasized shadow */
+}
+
+/*Style different nth child classes*/
+.project-item:nth-child(2n) {
+    transform: scale(1.05); /* Slightly larger scale for every third item */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Emphasized shadow */
+}
+
 /*Styling based on user action*/
 .project-item:hover {
     transform: translateY(-10px);
@@ -690,6 +760,18 @@ font-size: 0.9em;
     color: white;
     padding: 2px 10px;
     border-radius: 4px;
+    animation: fadeIn 1.5s ease-in-out;
+    transition: transform 0.3s ease;
+}
+
+/*style based on their position/structure*/
+.blog-style-2:first-of-type {
+    border-left: 5px solid #31bbd4; /* Different color for the first blog post */
+    background-color: #d3f6f6; /* Slightly different background */
+}
+/*Style different nth child classes*/
+.blog-style-2:nth-of-type(2) {
+    border-left: 5px solid #31a6d4; /* Different border color for the first blog post */
 }
 
 .blog-style-2 h3 {
@@ -710,17 +792,7 @@ font-size: 0.9em;
 .explore-btn:hover{
     color: rgb(16, 22, 20);
 }
-/* Article 1 Specific Styles */
-.blog-style-2 {
-    padding: 20px;
-    background-color: #d3f1fb;
-    border-left: 5px solid #4a90e2;
-    margin-bottom: 20px;
-    box-shadow: 0 0 8px rgba(0, 0, 0, 0.1);
-    position: relative;
-    animation: fadeIn 1.5s ease-in-out;
-    transition: transform 0.3s ease;
-}
+
 /*Styling based on user action*/
 .blog-style-2:hover {
     transform: translateY(-10px);
@@ -825,8 +897,12 @@ font-size: 0.9em;
     margin: 0 auto;
 
 }
-
+/*Style different nth child classes*/
+.hobby-card:nth-child(3n+1) {
+    border: 2px solid #4a90e2; /* Adds a distinct border to specific cards */
+}
 .hobby-style-3 {
+    background: linear-gradient(135deg, #92daee 0%,  #d8dee3 100%);
     background-color: rgba(255, 255, 255, 0.9);
     padding: 20px;
     border-radius: 8px;
@@ -972,6 +1048,29 @@ input[type="checkbox"]:checked + label {
     margin-bottom: 20px;
 }
 
+/*Style input (email) based on validity*/
+input[type="email"]:valid {
+    border-color: #1abc9c; /* Green border for valid email */
+    background-color: #f0fdfd; /* Light background for valid input */
+}
+
+input[type="email"]:invalid {
+    border-color: #ff4d4d; /* Red border for invalid email */
+    background-color: #ffe6e6; /* Light red background for invalid input */
+}
+
+/*Style input (telno) based on validity*/
+input[type="tel"]:valid {
+    border-color: #1abc9c;
+    box-shadow: 0 0 5px rgba(26, 188, 156, 0.5); /* Green glow for valid input */
+}
+
+input[type="tel"]:invalid {
+    border-color: #ff4d4d;
+    box-shadow: 0 0 5px rgba(255, 77, 77, 0.5); /* Red glow for invalid input */
+}
+
+
 .input-box input, .input-box textarea {
     width: 100%;
     padding: 10px;
@@ -993,7 +1092,22 @@ input[type="checkbox"]:checked + label {
     pointer-events: none;
     transition: 0.5s;
 }
+/*Style input (text) based on validity*/
+input[type="text"]:valid {
+    border-color: #1abc9c;
+}
 
+input[type="text"]:invalid {
+    border-color: #ff4d4d;
+}
+/*Style input (required fields) based on validity*/
+input:required:invalid {
+    border-color: #ff4d4d; /* Red border for required fields when invalid */
+}
+
+input:required:valid {
+    border-color: #1abc9c; /* Green border for required fields when valid */
+}
 .input-box input:focus + label,
 .input-box input:valid + label,
 .input-box textarea:focus + label,
@@ -1007,7 +1121,14 @@ input[type="checkbox"]:checked + label {
 .message-box textarea {
     height: 80px;
 }
+/*Style input (required fields) based on validity*/
+textarea:valid {
+    border-color: #1abc9c;
+}
 
+textarea:invalid {
+    border-color: #ff4d4d;
+}
 .Contact button {
     width: 100%;
     padding: 10px;
