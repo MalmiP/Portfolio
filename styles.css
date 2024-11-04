@@ -20,7 +20,7 @@ h1:not(.hero h1) {
 
 /* Navigation Bar */
 
-nav{
+header nav{
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -356,89 +356,6 @@ a[href^="https"] {
     100% { transform: scale(1); opacity: 1; }
 }
 
-/* Responsive Design for smaller screens */
-/* Responsive Styles */
-/* Styles for larger screens */
-@media (min-width: 768px) {
-    nav ul {
-        margin-top: 0;
-        display: flex; /* Show menu items in row on larger screens */
-        position: static; /* Reset position */
-        background-color: transparent; /* Remove background */
-        box-shadow: none; /* Remove shadow */
-    }
-
-    .menu-icon {
-        display: none; /* Hide hamburger on larger screens */
-    }
-
-    nav ul {
-        gap: 15px; /* Space between links */
-    }
-}
-@media (max-width: 768px) {
-    /* Hide the normal profile and make the menu icon visible */
-    nav ul {
-        margin-top: 0;
-        display: none;
-        flex-direction: column;
-        width: 100%;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        background-color: rgba(52, 73, 94, 0.3);
-    }
-    
-    #menu-toggle:checked + .menu-icon + ul {
-        display: flex;
-    }
-
-    .menu-icon {
-        display: block;
-    }
-
-    nav ul li {
-        width: 100%;
-        text-align: center;
-    }
-
-    nav ul li a {
-        padding: 15px;
-        display: block;
-        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
-    }
-
-    nav .profile {
-        font-size: 18px;
-        display: flex;
-        align-items: center;
-    }
-}
-@media only screen and (max-width: 768px) {
-    main {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .intro {
-        max-width: 100%;
-        text-align: center;
-    }
-
-    .social-media {
-        margin-top: 32px;
-        max-width: 100%;
-    }
-
-    .header-text {
-        flex-direction: column;
-    }
-    .social-icon {
-        width: 24px;
-        height: 24px;
-    }
-
-}
 
 
 /*About PAge*/
@@ -539,7 +456,6 @@ a[href^="https"] {
     padding: 100px;
 }
 
-
 .about-content-wrapper {
     display: flex;
     align-items: flex-start;
@@ -550,8 +466,6 @@ a[href^="https"] {
     content: "🎨 ";
     margin-right: 5px;
 }
-
-
 
 /* Left and Right Side Content */
 .left-side {
@@ -692,6 +606,9 @@ font-size: 0.9em;
   color: #777;
   margin: 0;
 }
+
+
+
 
 /*PROJECTS PAGE*/
 /*Projects*/
@@ -1040,10 +957,13 @@ font-size: 0.9em;
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    padding-top: 80px;
     
 }
 
 .contact-background {
+    padding-top: 40px;
+    padding-bottom: 40px;
     background-image: url(images/Photocentric\ Time\ to\ Relax.png);
     background-size: cover;
     background-position: center;
@@ -1053,10 +973,13 @@ font-size: 0.9em;
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-direction: column;
+
 }
 
 .contact-container {
     display: flex;
+    flex-direction: row;
     justify-content: space-between;
     align-items: flex-start;
     gap: 30px;
@@ -1067,6 +990,7 @@ font-size: 0.9em;
     border-radius: 10px;
     box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
     backdrop-filter: blur(10px);
+    
 }
 
 .contact-left, .contact-form {
@@ -1099,6 +1023,7 @@ font-size: 0.9em;
     display: flex;
     flex-direction: column;
     gap: 20px;
+    min-height: fit-content;
 }
 
 .contact-form h2 {
@@ -1352,3 +1277,401 @@ display: block;
 
 /*RESPONSIVE STYLING*/
 
+/* Responsive Styles for Nav bar */
+@media (min-width: 768px) {
+    nav ul {
+        margin-top: 0;
+        display: flex; /* Show menu items in row on larger screens */
+        position: static; /* Reset position */
+        background-color: transparent; /* Remove background */
+        box-shadow: none; /* Remove shadow */
+    }
+
+    .menu-icon {
+        display: none; /* Hide hamburger on larger screens */
+    }
+
+    nav ul {
+        gap: 15px; /* Space between links */
+    }
+}
+@media (max-width: 768px) {
+    /* Hide the normal profile and make the menu icon visible */
+    nav ul {
+        margin-top: 0;
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+        background-color: rgba(52, 73, 94, 0.3);
+    }
+    
+    #menu-toggle:checked + .menu-icon + ul {
+        display: flex;
+    }
+
+    .menu-icon {
+        display: block;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav ul li a {
+        padding: 15px;
+        display: block;
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    }
+
+    nav .profile {
+        font-size: 18px;
+        display: flex;
+        align-items: center;
+    }
+}
+
+/* Responsive Styles for Home Page */
+@media only screen and (max-width: 768px) {
+    main {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .intro {
+        max-width: 100%;
+        text-align: center;
+    }
+
+    .social-media {
+        margin-top: 32px;
+        max-width: 100%;
+    }
+
+    .header-text {
+        flex-direction: column;
+    }
+    .social-icon {
+        width: 24px;
+        height: 24px;
+    }
+
+}
+
+/* Responsive Styles for About Page */
+
+.about-page, .about-full-content, .skills-section, .education {
+    padding: 20px;
+}
+
+@media (max-width: 1024px) {
+    /* Adjust the layout and font sizes for medium screens */
+    .about-content-wrapper {
+        flex-direction: column;
+    }
+
+    .skills-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .about-section h2 {
+        font-size: 1.8em;
+    }
+
+    .about-content {
+        height: auto;
+        padding: 20px;
+    }
+
+    .profile-img {
+        width: 200px;
+        height: 200px;
+    }
+}
+
+@media (max-width: 768px) {
+    /* Further adjust layout for tablets and smaller screens */
+    nav ul {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    /* Adjust header menu icon positioning */
+    .menu-icon {
+        font-size: 24px;
+    }
+
+    /* Make about section content responsive */
+    .about-section {
+        padding: 10px;
+        text-align: center;
+    }
+
+    .profile-img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .about-content {
+        padding: 20px;
+    }
+
+    /* Skills section adjustments */
+    .skills-container {
+        flex-direction: column;
+    }
+
+    .skills-card {
+        width: 90%;
+        margin: 10px 0;
+    }
+}
+
+@media (max-width: 480px) {
+    header nav ul {
+        flex-direction: column;
+        gap: 5px;
+    }
+
+    .about-page, .about-section, .skills-section, .education {
+        padding: 10px;
+    }
+
+    .about-section h2 {
+        font-size: 1.5em;
+    }
+
+    .skills-section > h1, .skills-section > h2, .left-side h2, .about-section h2, .about-section .name, .experience-sub-title {
+        font-size: 1.2em;
+    }
+
+    .skills-card {
+        width: 100%;
+        padding: 15px;
+    }
+
+    .article-container article {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .icon {
+        margin: 0 auto 10px;
+    }
+
+    .details-container, .right-side, .left-side {
+        text-align: center;
+        padding: 0;
+    }
+
+    /* Adjust for header and profile section */
+    .profile-img {
+        width: 120px;
+        height: 120px;
+    }
+
+    .about-content {
+        padding: 10px;
+        margin: 0;
+    }
+}
+
+
+
+/* Responsive Styles for Projects Page */
+
+@media (max-width: 1200px) {
+    #project-section, #blogs, #hobbies {
+        padding-left: 100px;
+        width: 85%;
+    }
+}
+
+@media (max-width: 992px) {
+    .project-bg h1 {
+        font-size: 50px;
+        padding-top: 70px;
+    }
+
+    .project-bg p {
+        font-size: 18px;
+    }
+
+    .transparent-button {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+
+    #project-section, #blogs, #hobbies {
+        padding-left: 50px;
+        width: 90%;
+    }
+
+    .project-section1, .project-section2, .hobby-card {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .project-bg h1 {
+        font-size: 40px;
+    }
+
+    .project-bg p {
+        font-size: 16px;
+    }
+
+    .transparent-button {
+        padding: 6px 12px;
+        font-size: 12px;
+    }
+
+    .project-section1, .project-section2, .hobby-card {
+        grid-template-columns: 1fr;
+    }
+
+    #project-section, #blogs, #hobbies {
+        padding-left: 20px;
+        width: 100%;
+    }
+
+    .project-item, .blog-style-2, .hobby-style-3 {
+        padding: 15px;
+        font-size: 0.9rem;
+    }
+
+    .project-item h3, .blog-style-2 h3, .hobby-style-3 h3 {
+        font-size: 1.25rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .project-bg {
+        height: 400px;
+    }
+
+    .project-bg h1 {
+        font-size: 30px;
+        padding-top: 50px;
+    }
+
+    .project-bg p {
+        font-size: 14px;
+    }
+
+    .transparent-button {
+        padding: 5px 10px;
+        font-size: 10px;
+        margin-top: 30px;
+    }
+
+    #project-section h2, #blogs h2, #hobbies h2 {
+        font-size: 1.5rem;
+        width: 100%;
+        padding-bottom: 15px;
+    }
+}
+
+/* Responsive Styles for Contact Page*/
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+        align-items: center;
+        width: 90%;
+        overflow: hidden;
+    }
+
+    .contact-left, .contact-form {
+        width: 100%; /* Full width for both sections on smaller screens */
+    }
+
+    /* Adjust button and input sizes */
+    input[type="text"], input[type="email"], input[type="tel"], .message-box textarea {
+        font-size: 16px;
+    }
+
+    button {
+        font-size: 18px;
+    }
+    #menu-toggle:checked ~ nav ul {
+        display: flex;
+        flex-direction: column;
+        position: absolute;
+        top: 60px; /* Adjust based on navbar height */
+        left: 0;
+        width: 100%;
+        background-color: rgba(0, 0, 0, 0.8);
+        z-index: 1000;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Smaller screens styling */
+    .contact-background {
+        padding: 20px;
+    }
+
+    .contact-container {
+        width: 95%;
+        padding: 15px;
+    }
+
+    /* Font size adjustments */
+    .contact-left h2, .contact-form h2 {
+        font-size: 20px;
+    }
+
+    .find-me h2, .newsletter h2, .contact-form h2 {
+        font-size: 16px;
+    }
+
+    button {
+        padding: 8px;
+        font-size: 16px;
+    }
+}
+
+/* Other input styles and focus effects */
+.input-box input, .input-box textarea {
+    width: 100%;
+    padding: 10px;
+    background: transparent;
+    color: #2e6f87;
+    outline: none;
+    resize: none;
+}
+
+/* Footer styling for responsiveness */
+.main-footer {
+    padding: 20px;
+    text-align: center;
+}
+
+.footer-content {
+    padding: 20px;
+}
+
+.socials li {
+    display: inline-block;
+    margin: 0 10px;
+}
+
+.footer-menu ul {
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+@media (max-width: 768px) {
+    .footer-content h3 {
+        font-size: 18px;
+    }
+
+    .socials li {
+        margin: 0 5px;
+    }
+}
